@@ -154,7 +154,7 @@ std::set<size_t> Network:: step(const std::vector<double>& thalamic){
         double tot_inhib_neighbors(0), tot_ex_neighbors(0), input_temp;
         std::vector<std::pair<size_t, double> > neighbors_temp (neighbors(i) );
         size_t neighbors_temp_size (neighbors_temp.size());
-        for (size_t n(0); neighbor<neighbors_temp_size ; ++n ){
+        for (size_t n(0); n<neighbors_temp_size ; ++n ){
             if ( neurons[neighbors_temp[n].first].firing() ){
                 if (neurons[neighbors_temp[n].first].is_inhibitory()){
                     tot_inhib_neighbors += neighbors_temp[n].second;
